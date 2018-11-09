@@ -9,6 +9,6 @@ class CourseController extends Controller
 {
     public function index(Request $request)
     {
-        return  Course::filter()->get();
+        return Course::filter($request)->get();
     }
 }
