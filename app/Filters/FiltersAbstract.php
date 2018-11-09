@@ -8,6 +8,8 @@ abstract class FiltersAbstract
 {
     protected $request;
 
+    protected $filters = [];
+
     public function __construct(Request $request)
     {
         $this->request = $request;
@@ -15,6 +17,8 @@ abstract class FiltersAbstract
 
     public function filter(Builder $builder)
     {
-        return $builder;
+        foreach ($this->filters as $filter) {
+            echo $filter;
+        }
     }
 }
