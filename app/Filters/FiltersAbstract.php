@@ -19,7 +19,9 @@ abstract class FiltersAbstract
     {
 
         foreach ($this->getFilters() as $filter => $class) { // $filter - access, $class - AccessFilter.php
-           var_dump($this->resolveFilter($filter));
+           $a = $this->resolveFilter($filter);
+
+           dd($a);
         }
 
         return $builder;
