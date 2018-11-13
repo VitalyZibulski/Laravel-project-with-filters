@@ -6,9 +6,7 @@ use App\Filters\FiltersAbstract;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 
-class AccessFilter extends FiltersAbstract
+class AccessFilter
 {
-    protected $filters = [
 
-    ];
 }

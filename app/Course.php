@@ -10,6 +10,7 @@ class Course extends Model
 {
     public function scopeFilter(Builder $builder, $request)
     {
+
         return (new CourseFilters($request))->filter($builder);
     }
 }

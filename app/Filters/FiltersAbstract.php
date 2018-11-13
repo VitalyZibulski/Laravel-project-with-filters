@@ -17,8 +17,16 @@ abstract class FiltersAbstract
 
     public function filter(Builder $builder)
     {
-        foreach ($this->filters as $filter) {
-            echo $filter;
+
+        foreach ($this->filters as $filter => $class) { // $filter - access, $class - AccessFilter.php
+           var_dump($this->resolveFilter($class));
         }
+
+        return $builder;
+    }
+
+    protected function resolveFilter($class)
+    {
+        return new $class;
     }
 }
