@@ -19,9 +19,7 @@ abstract class FiltersAbstract
     {
 
         foreach ($this->getFilters() as $filter => $class) { // $filter - access, $class - AccessFilter.php
-           $a = $this->resolveFilter($filter);
-
-           dd($a);
+           $this->resolveFilter($filter);
         }
 
         return $builder;
